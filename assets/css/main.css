@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.router-link-active,
+.router-link-exact-active {
+    @apply bg-emerald-900 text-white
+}
+
+
+@layer components {
+    .card {
+        @apply flex flex-col gap-6;
+    }
+
+    .card__header {
+        @apply h-64;
+    }
+
+    .card__header img {
+        @apply h-full w-full;
+    }
+
+    .card__body {
+        @apply flex flex-col gap-5;
+    }
+
+    .card__body--title {
+        @apply leading-4 font-bold text-lg text-[rgb(17,24,39)] hover:text-[rgb(75,85,99)];
+    }
+
+    .card__body--text {
+        @apply leading-6 text-sm text-[rgb(75,85,99)];
+    }
+
+    .category__card--overlay {
+        background: linear-gradient(
+            to top,
+            rgb(17, 24, 39),
+            rgba(17, 24, 39, 0.4),
+            rgba(17, 24, 39, 0)
+        );
+    }
+
+}
